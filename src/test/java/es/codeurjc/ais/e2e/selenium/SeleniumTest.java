@@ -46,13 +46,10 @@ public class SeleniumTest {
 
         String topic = "fantasy";
 
-        // GIVEN: Partiendo de que estamos en la página principa
         this.driver.get("http://localhost:"+this.port+"/");
 
-        // WHEN: Introducimos drama en el campo de búsqueda y pulsamos el botón de buscar
         String title = driver.findElement(By.tagName("h1")).getText();
         
-        // THEN: Comprobamos que el título de la página es "Books (topic=fantasy)"
         assertEquals("Books (topic="+topic+")", title);
     }
     
